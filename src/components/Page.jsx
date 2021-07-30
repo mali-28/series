@@ -1,11 +1,10 @@
 import React, { useContext } from 'react';
 import { ApiContext } from './../context/Context';
 import SelectInput from './SelectInput';
-import Box from './Box';
 import TopBar from './TopBar';
-
-import Image from './Image';
+import Box from './Box';
 import Footer from './Footer';
+import Card from './Card';
 
 
 const Page = (props) => {
@@ -26,27 +25,14 @@ const Page = (props) => {
 
                 {arr?.map((val, id) => {
                     return <>
-
-                        <Box key={id} className="w-20 m-3 overflow-hidden box-shadow-ccc blue" >
-                            <Box className="h-20  box-shadow-ccc " >
-                                <Image src={val.images["Poster Art"].url} alt="series-image" />
-                            </Box>
-                            <Box className="p-2-1" >
-                                <Box className="font-014 pb-1">
-                                    title : {val.title}
-                                </Box>
-                                <hr />
-                                <Box className="pt-1"  >
-                                    year : {val.releaseYear}
-                                </Box>
-                            </Box>
-                        </Box>
+                        <Card id={id} val={val}/>
+                        
                     </>
                 })}
             </div>
         </header>
         }
-        <Footer className="mt-7 bg-black white p-2-0" />
+        <Footer className=" bg-black white p-2-0 absolute-bottom" />
     </>
 }
 

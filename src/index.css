@@ -190,10 +190,19 @@ select {
       height: 3rem;
       
   }
-  
-  .relative-bottom{
+  .minh-100vh{
+    min-height: 100vh;
+  }
+  .relative{
     position: relative;
+  }
+  .pb-7{
+    padding-bottom: 70px;
+  }
+  .absolute-bottom{
+    position: absolute;
     bottom: 0;
+    width: 100%;
   }
 @media screen and (max-width: 700px){
   .container{

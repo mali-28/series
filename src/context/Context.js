@@ -27,9 +27,9 @@ const Context = (props) => {
 
 
     const type = (name) => {
-        console.log(data)
+        // console.log(data)
         const items  = name ==='movies'? data.movies.slice(0, 25): data.series.slice(0,25)
-        console.log(items)
+        // console.log(items)
         setNewData(items);
         setArr(items)
         setIsLoaded(false);

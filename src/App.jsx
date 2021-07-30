@@ -7,7 +7,7 @@ import Context from "./context/Context";
 
 
 const App = ()=>{
-    return <>
+        return <div className=" minh-100vh relative pb-7">
     <Context>
     <BrowserRouter>
         <Switch>
@@ -19,7 +19,7 @@ const App = ()=>{
     </BrowserRouter>
         
     </Context>
-    </>
+    </div>
 }
 
 export default App;

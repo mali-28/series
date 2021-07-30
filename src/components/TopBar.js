@@ -1,6 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
-import Button from "./Button";
+import Link from "./Link";
 const TopBar = () => {
 
   return (
@@ -14,25 +13,12 @@ const TopBar = () => {
             </div>
           </div>
           <div className="d-flex jc-spaceAround alignItem-center">
+           
+            <Link to="/home" title="HOME"/>
+            <Link to="/series" title="SERIES"/>
+            <Link to="/movies" title="MOVIES"/>
 
-
-            <NavLink to='/home' activeClassName="active-menu">
-              <Button className="btn-bar" className="bg-blue white">
-                HOME
-              </Button>
-            </NavLink>
-
-            <NavLink to='/series' activeClassName="active-menu">
-              <Button className="btn-bar" className="bg-blue white">
-                SERIES
-              </Button>
-            </NavLink>
-
-            <NavLink to="/movies" activeClassName="active-menu">
-              <Button className="btn-bar" className="bg-blue white">
-                MOVIES
-              </Button>
-            </NavLink>
+            
 
 
           </div>
