@@ -34,6 +34,12 @@
 .blue{
   color: #0179FD;
 }
+.red{
+  color: red;
+}
+.black{
+  color: #000;
+}
 .white{
   color: #fff;
 }
@@ -64,6 +70,9 @@
 }
 .w-50vw{
   width: 50vw;
+}
+.w-100vw{
+  width: 100vw;
 }
 .m-3{
   margin: 30px;

@@ -50,8 +50,8 @@ const Context = (props) => {
                 arr = newData;
             }
             
-    
             setArr(arr);
+            
     }
 
     return <>

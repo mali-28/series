@@ -1,10 +1,10 @@
-import React, { useContext } from 'react';
+import React, { useContext,useEffect  } from 'react';
 import { ApiContext } from './../context/Context';
 import SelectInput from './SelectInput';
 import TopBar from './TopBar';
-import Box from './Box';
 import Footer from './Footer';
 import Card from './Card';
+import Box from './Box';
 
 
 const Page = (props) => {
@@ -12,7 +12,9 @@ const Page = (props) => {
 
     const changeOption = (e) => {
         options(e);
+        
     }
+    useEffect(()=>{ console.log(arr.length, "ssss")}, [changeOption])
 
     return <>
         <TopBar />
@@ -20,15 +22,13 @@ const Page = (props) => {
         {isLoaded ? "Loading..." : <header className="p-1 white" >
             <Footer className="w-50vw h-7 m-2-auto white " ><SelectInput onChange={changeOption} /></Footer>
             <div className="container d-flex flex-wrap">
-
-
-
-                {arr?.map((val, id) => {
+                {arr.length ? arr.map((val, id) => {
                     return <>
-                        <Card id={id} val={val}/>
+                         
+                        <Card key={id} id={id} val={val}/>
                         
                     </>
-                })}
+                }) : <Footer className="red  w-100vw" >Movie not found</Footer>  }
             </div>
         </header>
         }
