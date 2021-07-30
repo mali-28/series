@@ -1,9 +1,7 @@
 
 const Box = (props)=>{
-    const style ={
-    }
     return <>
-    <div key={props.key} style={{...style, ...props.style}}>
+    <div key={props.key}className={props.className}>
         {props.children}
     </div>
         

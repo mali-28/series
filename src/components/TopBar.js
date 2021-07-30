@@ -1,45 +1,35 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-// import { Link } from "react-router-dom";
 import Button from "./Button";
 const TopBar = () => {
 
   return (
 
-    <header style={styles.header}>
-      <div style={container}>
-        <div style={{
-          display: "flex",
-          justifyContent: "space-between"
-        }}>
-          <div style={{
-            display: "flex",
-            justifyContent: "space-around", alignItems: "center"
-          }}>
-            <div style={styles.title}>
+    <header className="header">
+      <div className='container'>
+        <div  className="d-flex jc-spaceBetween" >
+          <div className="d-flex jc-spaceAround alignItem-center" >
+            <div className="font-4">
               <p>GOK Streaming</p>
             </div>
           </div>
-          <div style={{
-            display: "flex",
-            justifyContent: "space-around", alignItems: "center"
-          }}>
+          <div className="d-flex jc-spaceAround alignItem-center">
 
 
-            <NavLink to='/home' activeStyle={{backgroundColor : "#016CF3"}}>
-              <Button className="btn-bar" style={{ backgroundColor: "#0179FD", color: "white" }}>
+            <NavLink to='/home' activeClassName="active-menu">
+              <Button className="btn-bar" className="bg-blue white">
                 HOME
               </Button>
             </NavLink>
 
-            <NavLink to='/series' activeStyle={{backgroundColor : "#016CF3"}}>
-              <Button className="btn-bar" style={{ backgroundColor: "#0179FD", color: "white" }}>
+            <NavLink to='/series' activeClassName="active-menu">
+              <Button className="btn-bar" className="bg-blue white">
                 SERIES
               </Button>
             </NavLink>
 
-            <NavLink to="/movies" activeStyle={{backgroundColor : "#016CF3"}}>
-              <Button className="btn-bar" style={{ backgroundColor: "#0179FD", color: "white" }}>
+            <NavLink to="/movies" activeClassName="active-menu">
+              <Button className="btn-bar" className="bg-blue white">
                 MOVIES
               </Button>
             </NavLink>
@@ -52,26 +42,6 @@ const TopBar = () => {
   );
 }
 
-const container = {
-  width: "70vw",
-  margin: "0 auto",
-  height: "100%",
-}
-
-
-const styles = {
-  title: {
-    fontSize: 40,
-  },
-  header: {
-    padding: 10,
-    height: 50,
-    color: "white",
-
-    backgroundColor: "#0179FD",
-
-  },
-};
 
 
 export default TopBar;
