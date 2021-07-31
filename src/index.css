@@ -24,6 +24,15 @@
 .font-014{
   font-size: 14px;
 }
+.font-016{
+  font-size: 16px;
+}
+.cursor-pointer{
+  cursor: pointer;
+}
+.cursor-not-allowed{
+  cursor: not-allowed;
+}
 .active-menu{
   background-color : #016CF3
 }
@@ -108,6 +117,9 @@
 .p-2-1{
   padding: 20px 10px;
 }
+.p-1-014{
+  padding: 10px 14px;
+}
 .pt-1{
   padding-top: 10px;
 }
@@ -141,6 +153,12 @@
 }
 .b-2-black{
   border : 2px solid #000
+}
+.b-0{
+  border: 0;
+}
+.m-08{
+  margin: 8px;
 }
 .btn-bar:hover{
     background-color: #016CF3 !important;

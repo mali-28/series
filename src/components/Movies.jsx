@@ -3,13 +3,14 @@ import { ApiContext } from './../context/Context';
 import Page from "./Page";
 
 const Movies = () => {
-    const {data, type}   = useContext(ApiContext);
+    const {data, type,page,change, sliceLength}   = useContext(ApiContext);
    
 
     useEffect(() => {
-       if(data.movies) type("movies")
 
-    }, [data.movies])
+       if(data.movies){ change("movies") ;type("movies")}
+         
+    }, [data.movies,page,sliceLength])
 
     
 

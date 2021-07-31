@@ -4,12 +4,13 @@ import Page from "./Page";
 
 const Series = ()=>{
 
-    const {data,type,}   = useContext(ApiContext);
+    const {data, type,page,change,sliceLength}   = useContext(ApiContext);
+
 
 
     useEffect(() => {
-        if(data.series)  type("series");
-    }, [data.series]);
+        if(data.series) { change("series") ; type("series");}
+    }, [data.movies,page,sliceLength]);
     
 
     return <>
